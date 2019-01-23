@@ -1,0 +1,19 @@
+("A".charCodeAt(0) - 65 + 3) % 26 + 65 
+
+:( meh
+
+
+
+String.fromCharCode(72)
+
+function cifra { 
+
+
+codigoasc(menos) codigo 0a25>desloco>giro>cod asc
+
+-65  + desloc %tam +65
+
+function cifra(string){
+return WWW
+
+document.write("ABC".charCodeAt());
