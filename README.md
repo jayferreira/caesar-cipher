@@ -1,1 +1,1 @@
-![Diagrama de blocos] (diagrama.jpg)
+![Diagrama de blocos](diagrama.jpg)
