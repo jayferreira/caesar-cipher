@@ -1,18 +1,33 @@
-function cifra() {
-  var input = "CAR";
-  var i;
-  var numeroASC; 
-  var desloc = 3;
-  var resultASC;
-  var palavraCodificada = [];
-  var palavraComDeslocamento = [];
+function encode() {
+  let input = "CAR";
+  let i;
+  let numeroASC; 
+  let desloc = 3;
+  let resultASC;
+  let palavraComDeslocDir = "";
   for (i = 0; i < input.length; i++) { 
     numeroASC = input.charCodeAt(i)
     resultASC = ( numeroASC - 65 + desloc ) % 26 + 65
-    palavraComDeslocamento.push(String.fromCharCode(resultASC))
+    palavraComDeslocDir += (String.fromCharCode(resultASC))
     
     
   }
-  return alert(palavraComDeslocamento);
+  return alert(palavraComDeslocDir);
 
+}
+
+function decode() {
+  let input = "FDU";
+  let i;
+  let numeroASC;
+  let desloc = -3;
+  let resultASC; 
+  let palavraComDeslocEsq = "";
+  for (i = 0; i < input.length; i++) {
+    numeroASC = input.charCodeAt(i)
+    resultASC = ( numeroASC - 65 + desloc ) % 26 + 65 
+    palavraComDeslocEsq += (String.fromCharCode(resultASC))
+
+  }
+  return alert(palavraComDeslocEsq)
 }
