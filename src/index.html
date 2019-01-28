@@ -10,9 +10,24 @@
     <script src="script.js">
 
      </script>
- <button id="start" onclick="encode()">Clique aqui para criptografar</button>
 
- <button id="start" onclick="decode()">Clique aqui para decifrar</button>
+<form id="InputproUser">
+    <div>
+        <label for="chave">Chave:</label>
+        <br>
+        <textarea id="chave"></textarea>
+        <br>
+         <label for="msg">Mensagem:</label>
+         <br>
+        <textarea id="msg"></textarea>
+    </div>
+    <div class="button">
+         <button id="start" onclick="encode()">Clique aqui para cifrar</button>
+         
+    </div>
+</form>
+
+
     
 
   </body>
