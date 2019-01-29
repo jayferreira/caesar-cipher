@@ -1,0 +1,12 @@
+let desloc = document.getElementById("chave").value;
+
+return printmessage.innerHTML
+
+charcode 
+
+hacker edition, pegar do 32 e nao do 65 
+adcionar mais uma volta 
+
+65 - 65 - 1) %26 + 65 = 64 
+
+65 - 65 - 1% 26) %26+26 + 65 = 64 

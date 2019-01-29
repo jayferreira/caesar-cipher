@@ -1,6 +1,5 @@
-function encode() {
-  let desloc = parseInt(document.getElementById("chave").value);
-  
+function encode( ) {
+  let desloc = parseInt(document.getElementById("chave").value);  
   let input = document.getElementById("msg").value;
   let i;
 
@@ -11,19 +10,22 @@ function encode() {
   for (i = 0; i < input.length; i++) { 
     numeroASC = input.charCodeAt(i);
     resultASC = (( numeroASC - 65 + desloc ) % 26) + 65;
-    palavraComDeslocDir += (String.fromCharCode(resultASC));
-    
-    
+    resultASC = (String.fromCharCode(resultASC));
+    palavraComDeslocDir += resultASC;
+           
   }
-  return alert(palavraComDeslocDir);
+
+  let codificada = document.getElementById("FraseCodificada").
+  codificada.innerHTML = codificada;
 
 }
 
 function decode() {
-  let input = "FDU";
+  let desloc = parseInt(document.getElementById("chaveD").value);
+  let input = getElementById("msgD").value;
+
   let i;
-  let numeroASC;
-  let desloc = 3;
+  let numeroASC;  
   let resultASC; 
   let palavraComDeslocEsq = "";
   for (i = 0; i < input.length; i++) {
@@ -32,5 +34,5 @@ function decode() {
     palavraComDeslocEsq += (String.fromCharCode(resultASC))
 
   }
-  return alert(palavraComDeslocEsq)
+  
 }

@@ -6,12 +6,11 @@
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
+  
   <body>
-    <script src="script.js">
+    
 
-     </script>
-
-<form id="InputproUser">
+<form>
     <div>
         <label for="chave">Chave:</label>
         <br>
@@ -23,12 +22,30 @@
     </div>
     <div class="button">
          <button id="start" onclick="encode()">Clique aqui para cifrar</button>
-         
+             
     </div>
+     <p id="FraseCodificada"></p>
 </form>
 
+<form id="InputproUserD">
+    <div>
+        <label for="chaveD">Chave:</label>
+        <br>
+        <textarea id="chaveD"></textarea>
+        <br>
+         <label for="msgD">Mensagem:</label>
+         <br>
+        <textarea id="msgD"></textarea>
+    </div>
+    <div class="button">
+         <button id="startD" onclick="decode()">Clique aqui para decodificar</button>
+         
+    </div>
+</form>    
 
-    
+<script type= "text/javacript" src="cipher.js"></script>
+
+    </script>
 
   </body>
 </html>
