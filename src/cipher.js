@@ -3,38 +3,32 @@ function encode() {
   let input = document.getElementById("msg").value;
   console.log(input);
   
-  let numeroASC 
-  let resultASC;
+  let numeroASC = 0;
+  let resultASC = 0;
   let palavraComDeslocDir = "";
+  
 
   for (let i = 0; i < input.length; i++){ 
-    numeroASC = input.charCodeAt(i);
-    console.log(numeroASC);
-    resultASC = (( numeroASC - 65 + desloc ) % 26) + 65;
-    palavraComDeslocDir += (String.fromCharCode(resultASC));
-    
-           
-  }
 
-  document.getElementById("FraseCodificada").innerHTML = palavraComDeslocDir;
- 
-}
+    if(input[i].charCodeAt() == 32){
+      palavraComDeslocDir += " ";
+    }
 
-function decode() {
-  let desloc = parseInt(document.getElementById("chaveD").value);
-  let input = getElementById("msgD").value;
-  console.log(input);
-
-  let numeroASC;  
-  let resultASC; 
-  let palavraComDeslocEsq = "";
-  for (let i = 0; i < input.length; i++) {
-    numeroASC = input.charCodeAt(i);
-    resultASC = ( numeroASC - 65 + ( desloc * -1 )) % 26 + 65;
-    palavraComDeslocEsq += (String.fromCharCode(resultASC))
-
-  }
+  else{ 
   
-  document.getElementById("FraseDecodificada").innerHTML = palavraComDeslocEsq;
+    if(input[i].charCodeAt() >= 65 && input[i].charCodeAt() <= 90){
+        resultASC = ((input[i].charCodeAt() - 65 + desloc) % 26) + 65;
+        palavraComDeslocDir += String.fromCharCode(resultASC);    
+        
+    }
+     
 
-}
+    else if(input[i].charCodeAt() >= 97 && input[i].charCodeAt() <= 122){
+      resultASC = ((input[i].charCodeAt() - 97 + desloc) % 26) + 97;
+      palavraComDeslocDir += String.fromCharCode(resultASC); 
+
+    }
+   }
+  }
+   document.getElementById("FraseCodificada").innerHTML = palavraComDeslocDir;
+  }
