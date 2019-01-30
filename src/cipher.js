@@ -1,44 +1,34 @@
-function encode() {
-  let desloc = parseInt(document.getElementById("chave").value);
-  let input = document.getElementById("msg").value;
-  let resultASC = 0;
-  let palavraComDeslocDir = "";
+function encode(desloc, input) {
+  
+  let numeroASC = 0;
+  let finalString = "";
   for (let i = 0; i < input.length; i++) {
     if (input[i].charCodeAt() == 32) {
-      palavraComDeslocDir += " ";
+      finalString += " ";
     }
     else {
       if (input[i].charCodeAt() >= 65 && input[i].charCodeAt() <= 90) {
-        resultASC = ((input[i].charCodeAt() - 65 + desloc) % 26) + 65;
-        palavraComDeslocDir += String.fromCharCode(resultASC);
+        numeroASC = ((input[i].charCodeAt() - 65 + desloc) % 26) + 65;
+        finalString += String.fromCharCode(numeroASC);
       }
       else if (input[i].charCodeAt() >= 97 && input[i].charCodeAt() <= 122) {
-        resultASC = ((input[i].charCodeAt() - 97 + desloc) % 26) + 97;
-        palavraComDeslocDir += String.fromCharCode(resultASC);
+        numeroASC = ((input[i].charCodeAt() - 97 + desloc) % 26) + 97;
+        finalString += String.fromCharCode(numeroASC);
       }
     }
   }
-  document.getElementById("FraseCodificada").innerHTML = palavraComDeslocDir;
+  return finalString;
 }
 
-function decode() {
-  let desloc = parseInt(document.getElementById("chaveD").value);
-  let input = document.getElementById("msgD").value;
-  let resultASC = 0;
-  let palavradecodificada = " ";  
-  for (let i = 0; i < input.length; i++) {
-    if (input[i].charCodeAt() == 32) {
-    }
-    else {
-      if (input[i].charCodeAt() >= 65 && input[i].charCodeAt() <= 90) {
-        resultASC = ((input[i].charCodeAt() - 65 + desloc) % 26) + 65;
-        palavradecodificada += String.fromCharCode(resultASC);
-      }
-      else if (input[i].charCodeAt() >= 97 && input[i].charCodeAt() <= 122) {
-        resultASC = ((input[i].charCodeAt() - 97 + desloc) % 26) + 97;
-        palavradecodificada += String.fromCharCode(resultASC);
-      }
-    }
-  }
-  document.getElementById("FraseDecodificada").innerHTML = palavradecodificada;
+function getText() {
+  const desloc = parseInt(document.getElementById("chave").value);
+  const input = document.getElementById("msg").value;
+  const final = encode(desloc, input);
+
+  document.getElementById("FraseCodificada").innerHTML = final;
+
+console.log(desloc);
+console.log(input);
+
 }
+
