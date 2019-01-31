@@ -32,9 +32,6 @@ function getText() {
 
   document.getElementById("FraseCodificada").innerHTML = final;
 
-console.log(desloc);
-console.log(input);
-
 }
 
 function decode(desloc, input) {
@@ -66,8 +63,4 @@ function getText2() {
 
   document.getElementById("FinalDecode").innerHTML = final;
 
-console.log(desloc);
-console.log(input);
-
 }
-
