@@ -27,10 +27,11 @@ function encode(desloc, input) {
 
 function getText() {
   const desloc = parseInt(document.getElementById("chave").value);
-  const input = document.getElementById("msg").value;
-  const final = encode(desloc, input);
+  const input = document.getElementById("msg");
+  const final = encode(desloc, input.value);
 
-  document.getElementById("FraseCodificada").innerHTML = final;
+  input.value = final;
+
 
 }
 
@@ -57,10 +58,10 @@ function decode(desloc, input) {
 }
 
 function getText2() {
-  const desloc = parseInt(document.getElementById("chaveD").value);
-  const input = document.getElementById("msgD").value;
-  const final = decode(desloc, input);
+  const desloc = parseInt(document.getElementById("chave").value);
+  const input = document.getElementById("msg").value;
+  const final = decode(desloc, input.value);
 
-  document.getElementById("FinalDecode").innerHTML = final;
+  input.value = final;
 
 }
