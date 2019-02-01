@@ -11,28 +11,29 @@ function encode(offset, message) {
     if (message[i].charCodeAt() == 32) {
       finalString += " ";
     }
-    else {
-      if (message[i].charCodeAt() >= 65 && message[i].charCodeAt() <= 90) {
-        numeroASC = mod((message[i].charCodeAt() - 65 + offset), 26) + 65;
-        finalString += String.fromCharCode(numeroASC);
-      }
-      else if (message[i].charCodeAt() >= 97 && message[i].charCodeAt() <= 122) {
-        numeroASC = mod((message[i].charCodeAt() - 97 + offset), 26) + 97;
-        finalString += String.fromCharCode(numeroASC);
-      }
+    else if (message[i].charCodeAt() >= 65 && message[i].charCodeAt() <= 90) {
+      numeroASC = mod((message[i].charCodeAt() - 65 + offset), 26) + 65;
+      finalString += String.fromCharCode(numeroASC);
     }
+    else if (message[i].charCodeAt() >= 97 && message[i].charCodeAt() <= 122) {
+      numeroASC = mod((message[i].charCodeAt() - 97 + offset), 26) + 97;
+      finalString += String.fromCharCode(numeroASC);
+    }
+    else {
+      finalString += message[i];
+    }
+    
   }
   return finalString;
-}
+} 
 
 function getText() {
   const offset = parseInt(document.getElementById("chave").value);
   const message = document.getElementById("msg");
   const final = encode(offset, message.value);
-
   message.value = final;
-
-
+  message.select();
+  message = document.execCommand("copy");
 }
 
 function decode(offset, message) {
@@ -43,25 +44,29 @@ function decode(offset, message) {
     if (message[i].charCodeAt() == 32) {
       finalString += " ";
     }
+    else if (message[i].charCodeAt() >= 65 && message[i].charCodeAt() <= 90) {
+      numeroASC = mod((message[i].charCodeAt() - 65 + (offset * -1 )), 26) + 65;
+      finalString += String.fromCharCode(numeroASC);
+    }
+    else if (message[i].charCodeAt() >= 97 && message[i].charCodeAt() <= 122) {
+      numeroASC = mod((message[i].charCodeAt() - 97 + (offset * -1 )), 26) + 97;
+      finalString += String.fromCharCode(numeroASC);
+    }
     else {
-      if (message[i].charCodeAt() >= 65 && message[i].charCodeAt() <= 90) {
-        numeroASC = mod((message[i].charCodeAt() - 65 + (offset * -1 )), 26) + 65;
-        finalString += String.fromCharCode(numeroASC);
-      }
-      else if (message[i].charCodeAt() >= 97 && message[i].charCodeAt() <= 122) {
-        numeroASC = mod((message[i].charCodeAt() - 97 + (offset * -1 )), 26) + 97;
-        finalString += String.fromCharCode(numeroASC);
-      }
+      finalString += message[i];
     }
   }
   return finalString;
 }
+  
+  
 
 function getText2() {
-  const offset = parseInt(document.getElementById("chave").value);
-  const message = document.getElementById("msg").value;
+  const offset = parseInt(document.getElementById("chaveD").value);
+  const message = document.getElementById("msgD");
   const final = decode(offset, message.value);
 
   message.value = final;
-
+  message.select();
+  message = document.execCommand("copy");
 }

@@ -14,28 +14,37 @@
         <p>Uma maneira <strong>fácil e discreta</strong> de mandar suas mensagens secretas!</p>
     </div>
     
+    <div id="howTo">
     <h2>Como funciona?</h2>
-    <p>funciona assim the quick brown fox jumps!
-      <br>Over the lazy dog, the queick brom lorem 
-      <br>ipsum lorem dorum sit amet quick brown! enjoy!
-    </p>
-    <img src="img aqui " alt="picture descripton" width:"100">
 
+    <h3> >>Quero mandar uma mensagem:</h3>
+      <p>Você digita a sua mensagem no primeiro campo, 
+      <br>depois, coloca um número no campo "senha" e clica no botão.
+      <br>Mande para suas amigas! Ah! não esqueça de 
+      <br>falar pra ela, a senha que você usou ;) 
+      </p>
+
+      <h3> >>Recebi uma mensagem:</h3>
+      <p>Funciona assim: Você digita a sua mensagem no primeiro campo, 
+      <br>depois, coloca um número no campo "senha" e clica no botão.
+      <br>Copie e mensagem e mande para suas amigas! Ah! não esqueça de 
+      <br>falar pra ela, a senha que você usou ;) 
+      </p>
+
+    </div>
+    
         <h3> < Codificar > </h3>
-        <p>Chave:</p> <input type="text" id="chave">
-        <p>Mensagem:</p> <input type="text" id="msg">
-        <button id="code" onclick="getText()">Clique aqui para cifrar</button>
+        <p>Mensagem:</p> <textarea id="msg" rows="5" cols="33" placeholder="Digite a sua mensagem aqui! =D"></textarea> 
+        <p>Senha:</p> <input type="number" id="chave">
+        <button id="code" onclick="getText()">Codificar</button>
 
         <h3> < Decodificar > </h3>
-        <p>Chave:</p> <input type="text" id="chave">
-        <p>Mensagem:</p> <input type="text" id="msg">
-        <button id="decode" onclick="getText2()">Clique aqui para decodificar</button>
-
-        <p id="FraseCodificada"></p>
-        <p id="FinalDecode"></p>
+        <p>Mensagem:</p> <textarea id="msgD" rows="5" cols="33" placeholder="Lqoqbm i aci umvaiomu iycq! =L"></textarea> 
+        <p>Senha:</p> <input type="number" id="chaveD">
+        <button id="decode" onclick="getText2()">Decodificar</button>
 
         <p>
-            <a href="#">Saiba Mais Sobre o Processo de cifragem</a>
+            <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar">Saiba Mais Sobre o Processo de Cifragem</a>
         </p>
       <div>
         <p> < Jessica Ferreira - @jayferreira - Laboratória ></Jessica> </p>
