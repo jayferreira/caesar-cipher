@@ -3,21 +3,21 @@ function mod(n, m) {
 }
 
 
-function encode(desloc, input) {
+function encode(offset, message) {
   
   let numeroASC = 0;
   let finalString = "";
-  for (let i = 0; i < input.length; i++) {
-    if (input[i].charCodeAt() == 32) {
+  for (let i = 0; i < message.length; i++) {
+    if (message[i].charCodeAt() == 32) {
       finalString += " ";
     }
     else {
-      if (input[i].charCodeAt() >= 65 && input[i].charCodeAt() <= 90) {
-        numeroASC = mod((input[i].charCodeAt() - 65 + desloc), 26) + 65;
+      if (message[i].charCodeAt() >= 65 && message[i].charCodeAt() <= 90) {
+        numeroASC = mod((message[i].charCodeAt() - 65 + offset), 26) + 65;
         finalString += String.fromCharCode(numeroASC);
       }
-      else if (input[i].charCodeAt() >= 97 && input[i].charCodeAt() <= 122) {
-        numeroASC = mod((input[i].charCodeAt() - 97 + desloc), 26) + 97;
+      else if (message[i].charCodeAt() >= 97 && message[i].charCodeAt() <= 122) {
+        numeroASC = mod((message[i].charCodeAt() - 97 + offset), 26) + 97;
         finalString += String.fromCharCode(numeroASC);
       }
     }
@@ -26,30 +26,30 @@ function encode(desloc, input) {
 }
 
 function getText() {
-  const desloc = parseInt(document.getElementById("chave").value);
-  const input = document.getElementById("msg");
-  const final = encode(desloc, input.value);
+  const offset = parseInt(document.getElementById("chave").value);
+  const message = document.getElementById("msg");
+  const final = encode(offset, message.value);
 
-  input.value = final;
+  message.value = final;
 
 
 }
 
-function decode(desloc, input) {
+function decode(offset, message) {
   
   let numeroASC = 0;
   let finalString = "";
-  for (let i = 0; i < input.length; i++) {
-    if (input[i].charCodeAt() == 32) {
+  for (let i = 0; i < message.length; i++) {
+    if (message[i].charCodeAt() == 32) {
       finalString += " ";
     }
     else {
-      if (input[i].charCodeAt() >= 65 && input[i].charCodeAt() <= 90) {
-        numeroASC = mod((input[i].charCodeAt() - 65 + (desloc * -1 )), 26) + 65;
+      if (message[i].charCodeAt() >= 65 && message[i].charCodeAt() <= 90) {
+        numeroASC = mod((message[i].charCodeAt() - 65 + (offset * -1 )), 26) + 65;
         finalString += String.fromCharCode(numeroASC);
       }
-      else if (input[i].charCodeAt() >= 97 && input[i].charCodeAt() <= 122) {
-        numeroASC = mod((input[i].charCodeAt() - 97 + (desloc * -1 )), 26) + 97;
+      else if (message[i].charCodeAt() >= 97 && message[i].charCodeAt() <= 122) {
+        numeroASC = mod((message[i].charCodeAt() - 97 + (offset * -1 )), 26) + 97;
         finalString += String.fromCharCode(numeroASC);
       }
     }
@@ -58,10 +58,10 @@ function decode(desloc, input) {
 }
 
 function getText2() {
-  const desloc = parseInt(document.getElementById("chave").value);
-  const input = document.getElementById("msg").value;
-  const final = decode(desloc, input.value);
+  const offset = parseInt(document.getElementById("chave").value);
+  const message = document.getElementById("msg").value;
+  const final = decode(offset, message.value);
 
-  input.value = final;
+  message.value = final;
 
 }
