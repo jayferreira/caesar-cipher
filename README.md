@@ -1,5 +1,3 @@
-![Diagrama de blocos](diagrama.jpg)
-
 # < Maricode > 
 
 ## O que é?
@@ -11,3 +9,5 @@ Através de funções, o programa Maricode realiza a cifragem de mensagens por m
 ## Como usar? 
 O usuário insere a mensagem que deseja enviar no campo 'Codificar', escolhe o offset de deslocamento na cifra no campo 'Senha' e clica no botão. O programa então irá exibir a mensagem codificada.  
 Caso o usuário tenha recebido uma mensagem codificada, deverá inseri-la no campo 'Decodificar', informar a 'senha' recebida pelo usuário que codificou a mensagem e clicar no botão. O programa irá exibir a mensagem decodificada.
+
+![Diagrama de blocos](diagrama.jpg)
