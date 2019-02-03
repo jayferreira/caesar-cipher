@@ -9,7 +9,6 @@ body {
 
 #border{
     background-image: url("https://image.freepik.com/free-vector/monochrome-low-poly-background_1048-8601.jpg");
-    border-radius: 5px;
     padding: 20px;
     box-shadow: 2px 2px #A6A5AA;
     opacity: 0.8;
@@ -18,17 +17,20 @@ body {
 #howTo{
     width:350px;
     height:430px; 
-    background-size: cover;
     background:#ccc; 
+    padding: 1%;
     float:left;
-
   }
+
+#container{
+    floar: right
+}
 
   a{
       color:#3C2F3B;
   }
 
-  a.hover{
+  a:hover{
       text-decoration: none;
       color: purple;
   }
