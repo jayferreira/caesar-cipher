@@ -17,28 +17,27 @@
   <div id="howTo">
     <h2>Como funciona?</h2>
 
-      <h3> >>Quero mandar uma mensagem:</h3>
-      <p>Você digita a sua mensagem no primeiro campo. Depois, coloca um número no campo "senha" 
-        exemplo: 58 ou -10 e clica no botão. Agora é só mandar no grupo do Whatts!
-         Ah não esqueça de informar, a senha que você usou ;) 
+      <h3> >>Para enviar mensagem codificada:</h3>
+      <p>No campo < Codificar > digite a sua mensagem. Depois, no campo chave 
+        digite um número de sua preferência. Agora é só mandar sua mensagem no grupo do Whatts!
+         Ah não esqueça de informar ao destinatário, a chave que você usou ;) 
       </p>
 
-      <h3> >>Recebi uma mensagem:</h3>
-      <p>Sua mensagem se parece com isso? -> " Roá, wxgr ehp? " 
-        Então você precisa decodificá-la! Copie a mensagem no campo Decodificar e 
-        coloque também a senha que você recebeu. Prontinho! 
+      <h3> >>Para ler uma mensagem codificada:</h3>
+      <p>Insira a mensagem no campo < Decodificar > e no campo
+        "chave" o número informado pelo seu rementente! Prontinho! 
       </p>
 
   </div id="container">
     
         <h3> < Codificar > </h3>
         <textarea id="userInput" rows="5" cols="33" placeholder="Digite a sua mensagem aqui! =D"></textarea> 
-        <p>Senha:</p> <input type="number" class="inputNumber" id="key">
+        <p>Chave:</p> <input type="number" class="inputNumber" id="key">
         <button class="button" onclick="getText()">Codificar</button>
 
         <h3> < Decodificar > </h3>
         <textarea id="userInputD" rows="5" cols="33" placeholder="Lqoqbm i aci umvaiomu iycq! =L"></textarea> 
-        <p>Senha:</p> <input type="number" class="inputNumber" id="keyD">
+        <p>Código Criptográfico:</p> <input type="number" class="inputNumber" id="keyD">
         <button class="button" onclick="getText2()">Decodificar</button>
 
         <p>
