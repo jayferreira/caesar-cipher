@@ -1,44 +1,40 @@
 body {
-    text-align:center;
-    margin-top: 50px;
-    background-image: url("https://images.unsplash.com/photo-1508796079212-a4b83cbf734d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
-    background-size: cover;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
+  text-align:center;
+  margin-top: 50px;
+  background-image: url("https://images.unsplash.com/photo-1508796079212-a4b83cbf734d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+  background-size: cover;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-#border{
-    background-image: url("https://image.freepik.com/free-vector/monochrome-low-poly-background_1048-8601.jpg");
-    padding: 20px;
-    box-shadow: 2px 2px #A6A5AA;
-    opacity: 0.8;
-  }  
+header{
+  background-image: url("https://image.freepik.com/free-vector/monochrome-low-poly-background_1048-8601.jpg");
+  padding: 20px;
+  box-shadow: 2px 2px #A6A5AA;
+  opacity: 0.8;
+}  
 
-#howTo{
-    width:350px;
-    height:430px; 
-    background:#ccc; 
-    padding: 1%;
-    float:left;
-  }
-
-#container{
-    floar: right
+aside{
+  width:350px;
+  height:auto; 
+  background:#ccc; 
+  padding: 1%;
+  
 }
 
   a{
-      color:#3C2F3B;
+  color:#3C2F3B;
   }
 
   a:hover{
-      text-decoration: none;
-      color: purple;
-  }
+  text-decoration: none;
+  color: purple;
+}
 
-  #footer{
-    background-image: url("https://image.freepik.com/free-vector/monochrome-low-poly-background_1048-8601.jpg");
-    opacity: 0.8;
-    padding: 0.5%;
-    box-shadow: 2px 2px #A6A5AA;
-  }
+footer{
+  background-image: url("https://image.freepik.com/free-vector/monochrome-low-poly-background_1048-8601.jpg");
+  opacity: 0.8;
+  padding: 0.5%;
+  box-shadow: 2px 2px #A6A5AA;
+}
 
