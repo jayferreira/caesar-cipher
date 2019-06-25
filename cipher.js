@@ -1,3 +1,9 @@
+const btnEncode = document.getElementById("btn-encode");
+btnEncode.addEventListener("click",getText);
+
+const btnCopy = document.getElementById("copy-btn");
+btnCopy.addEventListener("click", copyText);
+
 function mod(n, m) {
   return ((n % m) + m) % m;
 }
@@ -32,6 +38,13 @@ function getText() {
   message.value = final;
 }
 
+function getText2() {
+  const offset = parseInt(document.getElementById("keyD").value);
+  let message = document.getElementById("user-input-decode");
+  const final = decode(offset, message.value);
+  message.value = final;
+}
+
 function copyText() { 
   let copyBtn = document.getElementById("user-input")
   copyBtn.select();
@@ -60,12 +73,7 @@ function decode(offset, message) {
   return finalString;
 }
 
-function getText2() {
-  const offset = parseInt(document.getElementById("keyD").value);
-  let message = document.getElementById("user-input-decode");
-  const final = decode(offset, message.value);
-  message.value = final;
-}
+
 
 function copyText2() { 
   let copyBtn2 = document.getElementById("user-input-decode")
