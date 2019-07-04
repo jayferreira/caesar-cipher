@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -8,6 +9,7 @@
     Maricode - A codificação das Maricotas.
   </title>
 </head>
+
 <body>
   <header>
     <h1>
@@ -17,35 +19,32 @@
     <p>Uma maneira <strong>fácil e discreta</strong> de mandar suas mensagens secretas!</p>
   </header>
   <main class="main-content">
-  <aside>
-    <h2>Como funciona?</h2>
-    <h3> >>Para enviar mensagem codificada:</h3>
-    <p>No campo < Codificar> digite a sua mensagem. Depois, no campo chave
-        digite um número de sua preferência. Agora é só mandar sua mensagem no grupo do Whatts!
-        Ah não esqueça de informar ao destinatário, a chave que você usou ;)
-    </p>
-    <h3> >>Para ler uma mensagem codificada:</h3>
-    <p>Insira a mensagem no campo < Decodificar> e no campo
-        "chave" o número informado pelo seu rementente! Prontinho!
-    </p>
-  </aside>
-  <section>
-    <h3>
-      < Codificar>
-    </h3>
-    <textarea id="user-input" rows="5" cols="33" placeholder="Digite a sua mensagem aqui! =D"></textarea>
-    <input type="number" class="inputNumber" id="key" placeholder="Digite a chave para codificar aqui">
-    <button id="btn-encode" class="button" >Codificar</button>
-    <button id="copy-btn">Copiar</button>
-    <h3>
-      < Decodificar>
-    </h3>
-    <textarea id="user-input-decode" rows="5" cols="33" placeholder="Lqoqbm i aci umvaiomu iycq! =L"></textarea>
-    <input type="number" class="inputNumber" id="keyD" placeholder="Digite a chave para decodificar aqui">
-    <button class="button" onclick="getText2()">Decodificar</button>
-    <button id="copy-btn2" onclick="copyText2()">Copiar</button>
-  </section>
-</main>
+    <aside>
+      <h2>>>Como funciona?</h2>
+      <h3>>>Para enviar mensagem codificada:</h3>
+      <p>Digite a sua mensagem. No campo chave, digite um número de sua preferência, pode ser negativo também! 
+      Selecione se quer codificar ou decodificar, clique em OK. Clique no botão "copiar" e pronto! Agora é só mandar sua mensagem no grupo do Whatts!
+          Ah não esqueça de informar ao destinatário, a chave que você usou ;)
+      </p>
+      <h3> >>Para ler uma mensagem codificada:</h3>
+      <p>Insira a mensagem e no campo "chave" o número informado pelo seu rementente! 
+        Prontinho!
+      </p>
+    </aside>
+    <section>
+      <h3>
+        < Codificar e Decodificar>
+      </h3>
+      <textarea id="user-input" rows="5" cols="40" placeholder="Digite a sua mensagem aqui! =D"></textarea>
+      <div class="buttons-row">
+        <input type="number" class="inputNumber" id="key" placeholder="Digite a chave para codificar aqui"><br>
+        <input type="radio" name="cypher" class="rd-btn" id="rd-encode">Codificar<br>
+        <input type="radio" name="cypher" class="rd-btn" id="rd-decode">Decodificar<br>
+        <button id="btn-chypher">VAI</button>
+        <button id="copy-btn">Copiar</button>
+      </div>
+    </section>
+  </main>
   <footer>
     <p>
       <a href="https://pt.wikipedia.org/wiki/Cifra_de_C%C3%A9sar" target="_blank">Saiba Mais Sobre o Processo de
@@ -54,10 +53,9 @@
     <p><b>
         < Jessica Ferreira - @jayferreira - Laboratória>
       </b></p>
-  </footer>       
+  </footer>
   <script src="cipher.js"></script>
   <script src="tests.js"></script>
-
 </body>
 
 </html>

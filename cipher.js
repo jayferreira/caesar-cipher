@@ -1,82 +1,45 @@
-const btnEncode = document.getElementById("btn-encode");
-btnEncode.addEventListener("click",getText);
-
-const btnCopy = document.getElementById("copy-btn");
-btnCopy.addEventListener("click", copyText);
-
 function mod(n, m) {
   return ((n % m) + m) % m;
-}
+}   
 
+document.getElementById("btn-chypher").addEventListener("click", () => {
+  let message = document.getElementById("user-input").value;
+  let offset = parseInt(document.getElementById("key").value);
+  let choosen = document.getElementById("rd-decode").checked;
+  cypher(message, offset, choosen);
+})
 
-function encode(offset, message) {
+function cypher(message, offset, choosen) {
   let asciiCode = 0;
   let finalString = "";
-  for (let i = 0; i < message.length; i++) {
-    if (message[i].charCodeAt() == 32) {
+
+  if (choosen == true) {
+    offset = offset * -1;
+  }
+  for (let char of message) {
+    if (char.charCodeAt() == 32) {
       finalString += " ";
     }
-    else if (message[i].charCodeAt() >= 65 && message[i].charCodeAt() <= 90) {
-      asciiCode = mod((message[i].charCodeAt() - 65 + offset), 26) + 65;
+    else if (char.charCodeAt() >= 65 && char.charCodeAt() <= 90) {
+      asciiCode = mod((char.charCodeAt() - 65 + offset), 26) + 65;
       finalString += String.fromCharCode(asciiCode);
     }
-    else if (message[i].charCodeAt() >= 97 && message[i].charCodeAt() <= 122) {
-      asciiCode = mod((message[i].charCodeAt() - 97 + offset), 26) + 97;
+    else if (char.charCodeAt() >= 97 && char.charCodeAt() <= 122) {
+      asciiCode = mod((char.charCodeAt() - 97 + offset), 26) + 97;
       finalString += String.fromCharCode(asciiCode);
     }
     else {
-      finalString += message[i];
+      finalString += char;
     }
   }
-  return finalString;
+  let final = document.getElementById("user-input");
+  final.value = finalString;
 }
 
-function getText() {
-  const offset = parseInt(document.getElementById("key").value);
+const copyBtn = document.getElementById("copy-btn").addEventListener("click", () => {
   let message = document.getElementById("user-input");
-  const final = encode(offset, message.value);
-  message.value = final;
-}
-
-function getText2() {
-  const offset = parseInt(document.getElementById("keyD").value);
-  let message = document.getElementById("user-input-decode");
-  const final = decode(offset, message.value);
-  message.value = final;
-}
-
-function copyText() { 
-  let copyBtn = document.getElementById("user-input")
-  copyBtn.select();
+  message.select();
   document.execCommand("copy");
-}
-
-function decode(offset, message) {
-  let asciiCode = 0;
-  let finalString = "";
-  for (let i = 0; i < message.length; i++) {
-    if (message[i].charCodeAt() == 32) {
-      finalString += " ";
-    }
-    else if (message[i].charCodeAt() >= 65 && message[i].charCodeAt() <= 90) {
-      asciiCode = mod((message[i].charCodeAt() - 65 + (offset * -1)), 26) + 65;
-      finalString += String.fromCharCode(asciiCode);
-    }
-    else if (message[i].charCodeAt() >= 97 && message[i].charCodeAt() <= 122) {
-      asciiCode = mod((message[i].charCodeAt() - 97 + (offset * -1)), 26) + 97;
-      finalString += String.fromCharCode(asciiCode);
-    }
-    else {
-      finalString += message[i];
-    }
-  }
-  return finalString;
-}
+})
 
 
-
-function copyText2() { 
-  let copyBtn2 = document.getElementById("user-input-decode")
-  copyBtn2.select();
-  document.execCommand("copy");
-}
