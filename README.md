@@ -2,7 +2,7 @@
 
 > Projeto apresentado à Laboratória-Brasil.  A partir da situação problema proposta, criar uma aplicação que permita criptografar e descriptografar mensagens.
 
-![](interface.png) 
+![](newinterface.png) 
 
 #### O Problema
 "O aniversário da sua mãe está se aproximando e você está organizando uma festa surpresa. Para manter a festa em segredo foi criado um grupo de Whatsapp com amigos e familiares. O problema é que as vezes sua mãe utiliza o seu celular e pode ser que ela veja as suas mensagens. Como a festa é surpresa, você decide criar uma aplicação que permita enviar mensagens criptografadas e depois descriptografar. Então agora é a hora de aplicar os seus super poderes 😎"
@@ -14,7 +14,7 @@ Levando em conta as clientes ( meu grupo do Whatsapp da família )  e os objetiv
 Foram utilizadas cores contrastantes e botões grandes para melhor acessibilidade em celular. 
 Na versão atual, conta com instruções de uso em um modal para otimização do espaço visível.
 
-![Paleta de Cores](colors.jpeg)
+![Paleta de Cores](newcolors.jpg)
 
 ## Objetivos de Aprendizagem
 Construir uma aplicação web, utilizando conhecimentos de  **User Experience Design**  e de  **JavaScript**. 
