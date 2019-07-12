@@ -34,6 +34,7 @@ function cypher(message, offset, choosen) {
   }
   let final = document.getElementById("user-input");
   final.value = finalString;
+  return finalString;
 }
 
 const copyBtn = document.getElementById("copy-btn").addEventListener("click", () => {
@@ -41,5 +42,23 @@ const copyBtn = document.getElementById("copy-btn").addEventListener("click", ()
   message.select();
   document.execCommand("copy");
 })
+
+const modal = document.getElementById("info-modal");
+const btn = document.getElementById("modal-btn");
+const span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 

@@ -19,23 +19,23 @@
     <p>Uma maneira <strong>fácil e discreta</strong> de mandar suas mensagens secretas!</p>
   </header>
   <main class="main-content">
-    <aside>
-      <h2>>>Como funciona?</h2>
-      <h3>>>Para codificar uma mensagem:</h3>
-      <p>Digite a sua mensagem. No campo chave, digite um número de sua preferência!
-        Selecione codificar e clique em OK. Clique no botão "copiar" e pronto! Agora é só mandar sua mensagem onde você preferir!
-        Ah não esqueça de informar ao destinatário, a chave que você usou ;)
-      </p>
-      <h3> >>Para ler uma mensagem codificada:</h3>
-      <p>Insira a mensagem codificada e no campo "chave" o número informado pelo seu rementente! Selecione descodificar
-        e clique em OK!
-        Prontinho!
-      </p>
-    </aside>
-    <section>
-      <h3>
-        < Codificar e Decodificar>
-      </h3>
+    <section>      
+        <a id="modal-btn" ><h2>>>Como funciona?</h2></a>
+        <div id="info-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>>>Para codificar uma mensagem:</h3>
+            <p>Digite a sua mensagem. No campo chave, digite um número de sua preferência!
+              Selecione codificar e clique em OK. Clique no botão "copiar" e pronto! A mensagem já estará
+              no seu CRTL+C. Agora é só mandar sua mensagem onde você preferir!
+              Ah não esqueça de informar ao destinatário, a chave que você usou ;)
+            </p>
+            <h3> >>Para ler uma mensagem codificada:</h3>
+            <p>Insira a mensagem codificada e no campo "chave" o número informado pelo seu rementente! Selecione
+              Decifrar e clique em OK! Prontinho!
+            </p>
+          </div>
+        </div>       
       <textarea id="user-input" rows="12" cols="40" placeholder="Digite a sua mensagem aqui! =D"
         class="user-input"></textarea>
       <div>
@@ -44,7 +44,7 @@
       </div>
       <div class='buttons-row'>
         <input type="radio" name="cypher" class="rd-btn" id="rd-encode">Codificar
-        <input type="radio" name="cypher" class="rd-btn" id="rd-decode">Decodificar
+        <input type="radio" name="cypher" class="rd-btn" id="rd-decode">Decifrar
       </div>
       <div class='buttons-row'>
         <button class='flat-button' id="btn-chypher">OK</button>
