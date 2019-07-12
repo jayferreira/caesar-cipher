@@ -14,7 +14,7 @@ Levando em conta as clientes ( meu grupo do Whatsapp da família )  e os objetiv
 Foram utilizadas cores contrastantes e botões grandes para melhor acessibilidade em celular. 
 Na versão atual, conta com instruções de uso em um modal para otimização do espaço visível.
 
-![Paleta de Cores](colors.jpg)
+![Paleta de Cores](colors.jpeg)
 
 ## Objetivos de Aprendizagem
 Construir uma aplicação web, utilizando conhecimentos de  **User Experience Design**  e de  **JavaScript**. 
